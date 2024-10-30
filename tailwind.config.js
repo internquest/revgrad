@@ -8,7 +8,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "t690": { 'min': '690px' },
+        "a690": { 'min': '690px' },
+        '69210': { 'min': '691px', 'max': '999px' },
+        't690': { 'max': '690px' },
+        't999': { 'max': '999px' },
+        'a999': { 'min': '1000px' },
       },
       colors: {
         background: "var(--background)",
