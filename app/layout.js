@@ -1,16 +1,25 @@
 import localFont from "next/font/local";
+import { Instrument_Serif, Neuton } from 'next/font/google'
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+
+const satoshimed = localFont({
+  src: "./fonts/Satoshi-Medium.otf",
+  variable: "--font-satoshi-medium",
+  weight: "500 ",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const neuton = Neuton({
+  subsets: ['latin'],
+  variable: '--font-neuton',
+  weight: ['400', '700'],
+  display: 'swap',
+})
+const instrumentserif = Instrument_Serif({
+  subsets: ['latin'],
+  variable: '--font-instrument-serif',
+  weight: ['400'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#1c1c1c]  `}
+        className={`${satoshimed.variable} ${neuton.variable} ${instrumentserif.variable}  bg-white  `}
       >
         {children}
       </body>

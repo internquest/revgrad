@@ -8,8 +8,8 @@ const Scrolltextmove = () => {
     const scrollcontainertext = useRef(null)
 
     const { scrollYProgress } = useScroll({
-        target: scrollcontainertext.current,
-        offset: ['start start', '.9 end']
+        target: scrollcontainertext,
+        offset: ['start start', '.9 start']
     })
 
     const transformvaluechange = useTransform(scrollYProgress, [0, 1], ['0', '25'])
@@ -19,7 +19,7 @@ const Scrolltextmove = () => {
     })
     return (
         <>
-            <div ref={scrollcontainertext} className=" t999:flex  a690:flex flex flex-wrap relative z-[10]  text-white m-0  w-auto  ">
+            <div ref={scrollcontainertext} className=" t999:flex overflow-hidden a690:flex flex flex-wrap relative z-[10]  text-white m-0  w-auto  ">
 
                 <div className="flex items-stretch flex-wrap t690:w-full  a690:w-[50%] 69210:!w-full  relative">
 
@@ -55,7 +55,7 @@ const Scrolltextmove = () => {
                             <div className="relative min-w-[125%] left-[-25%]">
 
                                 <div className="flex z-[10] w-auto relative ">
-                                    <div style={{ transform: `translateX(${transformvalue}%)` }} className="w-full relative block t999:hidden ">
+                                    <div style={{ transform: `translateX(${transformvalue * 2}%)` }} className="w-full relative block t999:hidden ">
                                         <div className="pr-[25px] pb-[50px] pt-[50px] pl-[25%] relative">
                                             <div className="pointer-events-none absolute w-full h-full z-[-1] top-0 left-0 content-[''] block transition-[background-color_.45s_cubic-bezier(.25,1,.33,1),opacity_.45s_cubic-bezier(.25,1,.33,1)]">
                                                 <div className="bg-[#1c1c1c] pointer-events-none absolute z-[-1] h-full w-full top-0 left-0 content-[''] transition-[background-color_.45s_cubic-bezier(.25,1,.33,1),opacity_.45s_cubic-bezier(.25,1,.33,1)] block "></div>
@@ -178,7 +178,7 @@ const Scrolltextmove = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ transform: `translateX(${transformvalue * 2}%)` }} className="relative block w-full t999:hidden">
+                                    <div style={{ transform: `translateX(${transformvalue * 3.5}%)` }} className="relative block w-full t999:hidden">
                                         <div className="pr-[25px] pl-[25px] pb-[50px] pt-[50px] relative ">
                                             <div className="pointer-events-none absolute z-[-1] h-full w-full top-0 left-0 content-[''] block transition-[background-color_.45s_cubic-bezier(.25,1,.33,1),opacity_.45s_cubic-bezier(.25,1,.33,1)] ">
                                                 <div className="bg-[#1c1c1c] pointer-events-none absolute z-[-1] h-full w-full top-0 left-0 content-[''] transition-[background-color_.45s_cubic-bezier(.25,1,.33,1),opacity_.45s_cubic-bezier(.25,1,.33,1)] block "></div>
@@ -210,7 +210,7 @@ const Scrolltextmove = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[100vh] w-full"></div>
+
         </>
     )
 }

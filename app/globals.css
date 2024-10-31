@@ -20,6 +20,14 @@
   .heroleftbg {
     @apply bg-[url(../public/renuleftbg.webp)];
   }
+
+  .border-bla {
+    @apply border-[#131718]/[.9] border-[3px]
+  }
+
+  .text-bla {
+    @apply text-[#1f232e]
+  }
 }
 
 body {
