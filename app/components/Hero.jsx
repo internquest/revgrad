@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
     return (
         <div className='w-full '>
-            <div className=' flex flex-col t809:gap-6  gap-10 text-[#1F232E] border-b-[3px] border-t-[3px] border-[#1F232E]/[.9]  max-w-[1280px] items-center t809:px-2 t809:pt-12 px-10 pt-32 mx-auto min-h-[718px] '>
+            <div className=' flex flex-col t809:gap-6  gap-10 text-[#1F232E] border-b-[3px] border-t-[3px] border-[#1F232E]/[.9]  max-w-[1280px] items-center t809:px-2 t809:py-12 t809:pt-12 px-10 pt-32 mx-auto t809:min-h-[10px] min-h-[718px] '>
                 <h2 className='font-neuton font-normal self-start t809:text-[32px] text-[48px]  leading-[1.3] max-w-[516px] text-balance tracking-[-.005em] '>Times are uncertain but your
                     {' '}<span className='t809:text-[44px] text-[64px] font-extrabold leading-[1] text-[#FF5046]'>future</span> doesn’t have to be!
                 </h2>

@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { Instrument_Serif, Neuton } from 'next/font/google'
 import "./globals.css";
+import Navbar from "./components/navbar/Navbar";
 
 
 const satoshimed = localFont({
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${satoshimed.variable} ${neuton.variable} ${instrumentserif.variable}  bg-white  `}
       >
+        <Navbar />
         {children}
       </body>
     </html>
